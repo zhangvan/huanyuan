@@ -1,0 +1,242 @@
+﻿<html>
+    <head>
+        <title>环境化学</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/jquery.fullPage.css" type="text/css"/>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.fullPage.js"></script>
+
+        <script>
+            $(function(){
+                $(".con").fullpage({
+                    sectionsColor:['#f2f2f2','#f2f2f2','#f2f2f2','#f2f2f2','#f2f2f2','#f2f2f2'],
+                    'navigation':false,
+                    anchors:['page1','page2','page3','page4','page5','page6'],/*绑定锚链接*/
+                    menu:"#menu",
+                    verticalCentered:false,
+                    scrollingSpeed:700
+                })
+            })
+        </script>
+        <script>
+            function move() {
+                $.fn.fullpage.moveSlideRight();
+            }
+        </script>
+        <style>
+            @font-face {
+                font-family:'qingke';
+                src: url('font/qingke.TTF');
+                src: url('font/qingke.TTF') format('truetype');
+                url('hooray.svg#webfontjKg17VrE') format('svg');
+            }
+            @font-face {
+                font-family:'qianhei';
+                src: url('font/FZZXHJW.TTF');
+                src: url('font/FZZXHJW.TTF') format('truetype');
+                url('hooray.svg#webfontjKg17VrE') format('svg');
+            }
+            body,html,header,section,div,ul,li,a,p,h1,table{padding: 0; margin: 0;}
+            li{list-style: none;text-align: center;}
+            a{text-decoration: none; color: #000;}
+            .hd{ width:100%; height:75px; background:rgba(56,87,35,1); position:fixed; top:0; left:0; z-index:1;}
+            .hd .inner{ width:1100px; height:60px; margin:0 auto;}
+            .hd .logo{ float:left; margin-top:24px; margin-left: 20px; margin-right:0px; }
+            .hd .logo img{width: 250px; height: 64px; margin-top: -16px;}
+            .hd nav{ float:left;margin-left: 128px;}
+            .hd nav ul li{ float:left; font: 25px qingke;}
+            .hd nav ul li a{ line-height:30px; display:block; padding:0px 10px;margin-top: 23px; color:rgba(230,230,230,1);}
+            .hd nav ul li a:hover{ border-bottom: 2px solid white; color:rgba(255,255,255,1);}
+            .hd nav ul li.active a{ border-bottom: 2px solid white; color:rgba(255,255,255,1);}
+
+            .section{ overflow: hidden;}
+
+            .Subtitle{margin-left: -3px; }
+            .Subtitle ul{ width: 1000px;position: absolute; bottom: 10px;}
+            .Subtitle ul li{font-family: qianhei; width: 80px;height: 20px;padding: 30px 30px;margin-left: -15px; float: left; background: url("img/littleBg.png") no-repeat center; background-size: 100%;}
+            .Subtitle ul li:nth-child(1){background: url("img/littleBgleft.png") no-repeat center;background-size: 100%;}
+            .Subtitle ul li:hover { margin-top: -10px; padding-left: 25px; margin-left: -10px;}
+
+            @-webkit-keyframes s1move{
+                0%{-webkit-transform:translate(-1000px,0px);transform:translate(-1000px,0px)}
+                100%{-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}
+            }
+            .s1s1{background: url("img/bg.jpg") center no-repeat; background-size: 100%;}
+            .s1s2{background: url(img/s1bg2.JPG) center;background-size: 100%}
+            .s1.active .Subtitle ul li:nth-child(1){-webkit-animation:s1move 1.2s 0s forwards;animation:s1move 2s 0s forwards}
+            .s1.active .Subtitle ul li:nth-child(2){-webkit-animation:s1move 1.6s 0s forwards;animation:s1move 2s 0s forwards}
+            .s1.active .Subtitle ul li:nth-child(3){-webkit-animation:s1move 2s 0s forwards;animation:s1move 2s 0s forwards}
+            .s1.active .Subtitle ul li:nth-child(4){-webkit-animation:s1move 2.4s 0s forwards;animation:s1move 2s 0s forwards}
+            .s1.active .Subtitle ul li:nth-child(5){-webkit-animation:s1move 2.8s 0s forwards;animation:s1move 2s 0s forwards}
+
+            @-webkit-keyframes s2move{
+                0%{-webkit-transform:translate(0px,-1000px);transform:translate(0px,-1000px)}
+                100%{-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}
+            }
+            .s2{ background: url("img/s2bg.JPG") center no-repeat; background-size: 100%;}
+            .s2 .Subtitle2 {margin-top: 70px; position: absolute; width: 200px;}
+            .s2 .Subtitle2 li{transform: translateY(-1000px); width: 130px; background:rgba(217,217,217,0.6); color: #000;font-size: 20px; font-family: qianhei; padding: 12px 10px; margin: 0px 0px;}
+            .s2 .Subtitle2 li:hover{border-bottom: 2px solid white; margin-left: 10px;}
+            .s2.active .Subtitle2 li:nth-child(1){-webkit-animation:s2move 1.4s 0.1s forwards;animation:s2move 1.4s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(2){-webkit-animation:s2move 1.6s 0.1s forwards;animation:s2move 1.6s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(3){-webkit-animation:s2move 1.8s 0.1s forwards;animation:s2move 1.8s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(4){-webkit-animation:s2move 2s 0.1s forwards;animation:s2move 2s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(5){-webkit-animation:s2move 2.2s 0.1s forwards;animation:s2move 2.2s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(6){-webkit-animation:s2move 2.4s 0.1s forwards;animation:s2move 2.4s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(7){-webkit-animation:s2move 2.6s 0.1s forwards;animation:s2move 2.6s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(8){-webkit-animation:s2move 2.8s 0.1s forwards;animation:s2move 2.8s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(9){-webkit-animation:s2move 3s 0.1s forwards;animation:s2move 3s 0.1s forwards}
+            .s2.active .Subtitle2 li:nth-child(10){-webkit-animation:s2move 3.2s 0.1s forwards;animation:s2move 3.2s 0.1s forwards}
+
+            @-webkit-keyframes s3moveLeft{
+                0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px)}
+                100%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+            }
+            @-webkit-keyframes s3moveRight{
+                0%{-webkit-transform:translateX(1000px);transform:translateX(1000px)}
+                100%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+            }
+            .s3{ background: url(img/s3bg.jpg) center no-repeat; background-size: 100%;}
+            .s3 a:nth-child(1) img{width: 400px; position: relative;margin-top: 100px;margin-left: 235px;}
+            .s3 a:nth-child(2) img{width: 400px; position: absolute;margin-top: 100px;margin-left: 105px;}
+            .s3.active a:nth-child(1){-webkit-animation:s3moveLeft 1s 0.1s forwards;animation:s3moveLeft 1s 0.1s forwards;}
+            .s3.active a:nth-child(2){-webkit-animation:s3moveRight 1s 0.1s forwards;animation:s3moveRight 1s 0.1s forwards;}
+            .s3.active img:hover{width: 410px;}
+
+            .s4{ background: url(img/s4bg.JPG) center; background-size: 100%; }
+            .s4 .Subtitle2 {margin-top: 70px; position: absolute; width: 200px;}
+            .s4 .Subtitle2 li{transform: translateY(-1000px); width: 200px; background:rgba(217,217,217,0.6); color: #000;font-size: 20px; font-family: qianhei; padding: 12px 10px; margin: 0px 0px;}
+            .s4 .Subtitle2 li:hover{border-bottom: 2px solid white; margin-left: 10px;}
+            .s4.active .Subtitle2 li:nth-child(1){-webkit-animation:s2move 1.4s 0.1s forwards;animation:s2move 1.4s 0.1s forwards}
+            .s4.active .Subtitle2 li:nth-child(2){-webkit-animation:s2move 1.6s 0.1s forwards;animation:s2move 1.6s 0.1s forwards}
+            .s4.active .Subtitle2 li:nth-child(3){-webkit-animation:s2move 1.8s 0.1s forwards;animation:s2move 1.8s 0.1s forwards}
+            .s4.active .Subtitle2 li:nth-child(4){-webkit-animation:s2move 2s 0.1s forwards;animation:s2move 2s 0.1s forwards}
+            .s4.active .Subtitle2 li:nth-child(5){-webkit-animation:s2move 2.2s 0.1s forwards;animation:s2move 2.2s 0.1s forwards}
+            .s4.active .Subtitle2 li:nth-child(6){-webkit-animation:s2move 2.4s 0.1s forwards;animation:s2move 2.4s 0.1s forwards}
+            .s4.active .Subtitle2 li:nth-child(7){-webkit-animation:s2move 2.6s 0.1s forwards;animation:s2move 2.6s 0.1s forwards}
+
+            .s5{ background: url(img/s5bg.jpg) center no-repeat; background-size: 100%}
+            .s5 .Subtitle2 {margin-top: 70px; position: absolute; width: 200px;}
+            .s5 .Subtitle2 li{transform: translateY(-1000px); width: 130px; background:rgba(217,217,217,0.6); color: #000;font-size: 20px; font-family: qianhei; padding: 12px 10px; margin: 0px 0px;}
+            .s5 .Subtitle2 li:hover{border-bottom: 2px solid white; margin-left: 10px;}
+            .s5.active .Subtitle2 li:nth-child(1){-webkit-animation:s2move 1.4s 0.1s forwards;animation:s2move 1.4s 0.1s forwards}
+            .s5.active .Subtitle2 li:nth-child(2){-webkit-animation:s2move 1.6s 0.1s forwards;animation:s2move 1.6s 0.1s forwards}
+            .s5.active .Subtitle2 li:nth-child(3){-webkit-animation:s2move 1.8s 0.1s forwards;animation:s2move 1.8s 0.1s forwards}
+            .s5.active .Subtitle2 li:nth-child(4){-webkit-animation:s2move 2s 0.1s forwards;animation:s2move 2s 0.1s forwards}
+            .s5.active .Subtitle2 li:nth-child(5){-webkit-animation:s2move 2.2s 0.1s forwards;animation:s2move 2.2s 0.1s forwards}
+
+            .s6{ background: url(img/s6bg.png) center; background-size: 100%;}
+            .s6 .Subtitle2 {margin-top: 70px; position: absolute; width: 200px;}
+            .s6 .Subtitle2 li{transform: translateY(-1000px); width: 130px; background:rgba(217,217,217,0.6); color: #000;font-size: 20px; font-family: qianhei; padding: 12px 10px; margin: 0px 0px;}
+            .s6 .Subtitle2 li:hover{border-bottom: 2px solid white; margin-left: 10px;}
+            .s6.active .Subtitle2 li:nth-child(1){-webkit-animation:s2move 1.4s 0.1s forwards;animation:s2move 1.4s 0.1s forwards}
+            .s6.active .Subtitle2 li:nth-child(2){-webkit-animation:s2move 1.6s 0.1s forwards;animation:s2move 1.6s 0.1s forwards}
+            .s6.active .Subtitle2 li:nth-child(3){-webkit-animation:s2move 1.8s 0.1s forwards;animation:s2move 1.8s 0.1s forwards}
+            .s6.active .Subtitle2 li:nth-child(4){-webkit-animation:s2move 2s 0.1s forwards;animation:s2move 2s 0.1s forwards}
+            .s6.active .Subtitle2 li:nth-child(5){-webkit-animation:s2move 2.2s 0.1s forwards;animation:s2move 2.2s 0.1s forwards}
+        </style>
+    </head>
+<body>
+    <header class="hd"> <!--头部区域-->
+        <div class="inner">
+            <a href="#page1" class="logo"><img src="img/bglogo.png"/></a>
+            <nav>
+                <ul id="menu">
+                    <li data-menuanchor="page1"><a href="#page1">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li> <!-- class="active"-->
+                    <li data-menuanchor="page2"><a href="#page2">课程介绍</a></li>
+                    <li data-menuanchor="page3"><a href="#page3">师资队伍</a></li>
+                    <li data-menuanchor="page4"><a href="#page4">实践教学</a></li>
+                    <li data-menuanchor="page5"><a href="#page5">网上课堂</a></li>
+                    <li data-menuanchor="page6"><a href="#page6">学习园地</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="con">
+
+    <section class="section s1">
+        <div class="slide s1s1">
+            <div class="Subtitle">
+                <ul>
+                    <li><a href="#page2">课程简介</a></li>
+                    <li>公告信息</li>
+                    <li>课件下载</li>
+                    <li onclick="move()">申报表</li>
+                    <li>微信号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide s1s2" id="S1s2">
+            <div class="Subtitle">
+                <ul>
+                    <li><a href="#page2">课程简介</a></li>
+                    <li>公告信息</li>
+                    <li>课件下载</li>
+                    <li>申报表</li>
+                    <li>微信号</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section s2">
+        <div class="Subtitle2">
+            <ul>
+                <li><a href="others/second1.html">课程概述</a></li>
+                <li><a href="others/second2.html">课程特色</a></li>
+                <li><a href="others/second3.html">教学改革</a></li>
+                <li><a href="others/second4.html">教学大纲</a></li>
+                <li><a href="others/second6.html">参考书目</a></li>
+                <li><a href="others/second7.html">评价反馈</a></li>
+                <li><a href="others/second8.html">联系我们</a></li>
+                <li><a href="others/second9.html">荣誉证书</a></li>
+                <li><a href="others/second10.html">精品课申报表</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section s3">
+            <a href="others/teacher2.html"><img src="img/zhang.png"/></a>
+            <a href="others/teacher1.html"><img src="img/luo.png"/></a>
+    </section>
+
+    <section class="section s4">
+        <div class="Subtitle2">
+            <ul>
+                <li><a href="others/practice1.html">实验介绍</a></li>
+                <li><a href="others/practice2.html">实验操作</a></li>
+                <li><a href="others/practice3.html">实验管理</a></li>
+                <li><a href="others/practice4.html">国内外交流</a></li>
+                <li><a href="others/practice5.html">环境科学综合实验</a></li>
+                <li><a href="others/practice6.html">本科生科技社团活动</a></li>
+                <li><a href="others/practice7.html">本科生创新性实验计划</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section s5">
+        <div class="Subtitle2">
+            <ul>
+                <li><a href="others/elearning1.html">课件下载</a></li>
+                <li><a href="others/elearning2.html">模拟试题</a></li>
+                <li><a href="others/elearning3.html">在线问答</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section s6">
+        <div class="Subtitle2">
+            <ul>
+                <li><a href="others/studentzone1.html">学生论坛</a></li>
+                <li><a href="others/studentzone2.html">网络资源</a></li>
+                <li><a href="others/studentzone3.html">研究型课程</a></li>
+                <li><a href="others/studentzone4.html">多媒体资料</a></li>
+                <li><a href="others/studentzone5.html">精品课申报表</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

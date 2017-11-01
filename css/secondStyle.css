@@ -1,0 +1,74 @@
+@font-face {
+    font-family:'qingke';
+    src: url('../font/qingke.TTF');
+    src: url('../font/qingke.TTF') format('truetype');
+    url('') format('svg');
+}
+@font-face {
+    font-family:'qianhei';
+    src: url('../font/FZZXHJW.TTF');
+    src: url('../font/FZZXHJW.TTF') format('truetype');
+    url('') format('svg');
+}
+@font-face {
+    font-family:'heiti';
+    src: url('../font/simhei.ttf');
+    src: url('../font/simhei.ttf') format('truetype');
+    url('') format('svg');
+}
+@font-face {
+    font-family:'fangsong';
+    src: url('../font/simfang.ttf');
+    src: url('../font/simfang.ttf') format('truetype');
+url('') format('svg');
+}
+body,html,header,section,div,ul,li,a,p,h1,iframe{padding: 0; margin: 0;}
+li{text-align: center; text-decoration: none;list-style: none;list-style-type: none;}
+a{
+	text-decoration: none;
+	color: #000;
+	vertical-align: bottom;
+}
+.hd{ width:100%; height:75px; background:rgba(56,87,35,1); position:fixed; top:0; left:0; z-index:1;}
+.hd .inner{ width:1100px; height:60px; margin:0 auto;}
+.hd .logo{ float:left; margin-top:24px; margin-left: 20px; margin-right:0px; }
+.hd .logo img{width: 250px; height: 64px; margin-top: -16px;}
+.hd nav{ float:left;margin-left: 128px;}
+.hd nav ul li{ float:left; font: 25px qingke;}
+
+.hd nav ul .secondTop, .practiceTop, .elearningTop, .studentzoneTop{border-bottom:2px solid white;}
+
+.hd nav ul li a{ line-height:30px; display:block; padding:0px 10px;margin-top: 23px; color:rgba(230,230,230,1);}
+.hd nav ul li a:hover{ border-bottom: 2px solid white; color:rgba(255,255,255,1);}
+.hd nav ul li.active a{ border-bottom: 2px solid white; color:rgba(255,255,255,1);}
+
+.heading{position: fixed; z-index: 3; margin-top: 0px;top:0}
+
+.s2{overflow:hidden; }
+.s2 .ulBox { background:rgba(227,240,218,0.8);margin: 70px auto; position: absolute; width: 100%; height:90px;top:0;}
+.s2 .ulBox table{margin-top: 20px;float:right;margin-right:130px;}
+.s2 .ulBox table td{width: 100px;color: #000;font: 18px qianhei;}
+.s2 .ulBox .practiceTable {margin-right:0px;}
+.s2 .ulBox .practiceTable td{width:200px}
+.s2 .ulBox .studentzoneTable{margin-right:80px;}
+.s2 .ulBox .studentzoneTable td{width:130px;}
+.s2 .ulBox table td:hover a{color: #0b55b9}
+
+.text{width: 700px;margin-top: 180px; margin-left: auto; margin-right: auto;}
+.text1{margin-bottom: 80px;}
+.text2{margin: 50px auto;}
+.text9{height: 500px;}
+.text h1{text-align: center; color: #083c10; font:30px heiti;}
+.text .hengxian {width: 100%; height: 3px; background-color: #083c10;margin: 5px auto}
+.text p{margin: 0px 35px;}
+
+.text .secondTextStyle{ font: 26px fangsong;}
+.text .second8text{ font:26px fangsong; margin-left: 130px;}
+.text .second8textTop{text-align: center;font:26px fangsong;}
+
+.foot{width: 100%; height: 150px; bottom: 0; background-color: #c0c5c0; }/*½Å²¿*/
+.foot p{margin-top: 30px; margin-left: 40%; color: #000; position: absolute; text-align: center;}
+.link1 {
+	color: #00F;
+	text-decoration: underline;
+}
