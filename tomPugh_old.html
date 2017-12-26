@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>Climate parameters</title>
+</head>
+<title>点击展开文字隐藏文字JS代码</title>
+<style type="text/css">
+* {
+	margin:0; padding:0; border:0;
+}
+ul {
+	list-style-type:none;
+}
+li {
+	margin:10px;
+	width:800px;
+	border:4px double #ccc;
+	background:#eee;
+}
+li .main,li .intro {
+	margin:5px 5px 0 5px;
+	font-size:12px;
+}
+li .main {
+	height:25px;
+	overflow:hidden;
+	line-height:22px;
+}
+#main1 {
+	height:450px;
+}
+li h3 {
+	margin:0 5px 5px;
+}
+li p{
+	margin:8px 0;
+	font-size:14px;
+	color:#111;
+}
+li .mainf {
+	line-height:15px;
+	font-size:12px;
+	color:#333;
+}
+li .intro {
+	padding:3px 0 0;
+	color:#036;
+	line-height:18px;
+	border-top:1px dotted #366;
+}
+li .key {
+	float:right;
+	margin-top:-20px;
+	color:#900;
+	cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+<h1> This page is prepared for Dr Tom Pugh Only. All the data source from MIDAS</h1>
+<p class="mainf">And actually, you are the <strong>only one</strong> who is able to access the data with uni email address</p>
+<h1>&emsp;</h1>
+<ul>
+<li>
+<div class="main" id="main1">
+	<h2>Radiation</h2>
+	<p class="mainf"></p>
+	<p><strong>Manipulation</strong>
+	<br />- Delete original record (marked as 0 by Met Office) if the modified record (Marked as 1) is available
+    <br />-	If data miss on some day/hour, insert the time and set the record as NAN
+    <br />-	Only retrieve 24 hours sum record, ignore hourly record.
+    <br />-	Listed out missing day/hour (This is listed in the last column, I recorded it as the number of record in the dataset)
+    <br />-	Separate dataset by stations (Not applied here as we got only 1 station)
+    <br />-	Listed out which stations are working on which days? (Not applied here as we got only 1 station)</p>
+    <p><strong>Explanation</strong>
+	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations">Shawbury</a>, from 2001 to 2017
+	<br />- CSV and Mat file contain the same dataset.
+    <br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date, 366 days in total
+    <br />-	<span style="color:MediumSeaGreen;">Radiation_Kj_m2</span> is the daily gross glbl_irad_amt, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/RO_Table.html">here</a>
+    <br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, only 1 station
+    <br />-	<span style="color:MediumSeaGreen;">Number_of_records</span> is the number of records which are used to calculate the mean value</p>
+	<p><strong>Data</strong>
+	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EWlEot8qQlJNuBVNGp1YxtkBalOq9SBwBOBooXpfUcY2Qg">
+	Radiation.zip </a>, 
+    </p>
+</div>
+<div class="intro">
+	Contact me: Van Zhang &rarr; hxz605@student.bham.ac.uk
+	<span class="key" onclick="fn(this,1)">FOLD</span>
+</div>
+</li>
+<li>
+<div class="main" id="main2">
+	<h2>Temperature_Mean</h2>
+	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
+	<p> In process
+	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com:443/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EcBijNQKkfZJgf9JLz_lhBoByD9dUocTxt5XSnlmLP5fiQ&email=T.A.M.Pugh%40bham.ac.uk&e=df108b6863554c1694767cb983f387f1">
+	CSV_file_pack </a>,</p>
+	
+</div>
+<div class="intro">
+	Contact me: Van Zhang &rarr; hxz605@student.bham.ac.uk
+	<span class="key" onclick="fn(this,2)">Unfold</span>
+</div>
+</li>
+<li>
+<div class="main" id="main3">
+	<h2>Temperature_MinMax</h2>
+	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
+	<p> In process</p>
+	
+</div>
+<div class="intro">
+	Contact me: Van Zhang &rarr; hxz605@student.bham.ac.uk
+	<span class="key" onclick="fn(this,3)">Unfold</span>
+</div>
+</li>
+<li>
+<div class="main" id="main4">
+	<h2>Rainfall</h2>
+	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
+	<p> In process</p>
+	
+</div>
+<div class="intro">
+	Contact me: Van Zhang &rarr; hxz605@student.bham.ac.uk
+	<span class="key" onclick="fn(this,4)">Unfold</span>
+</div>
+</li>
+</ul>
+<script type="text/javascript">
+var h = new Array(0,450,25,25,25);
+var tf = new Array(false,true,false,false,false);
+var minheight = 25;
+var maxheight = 450;
+function fn(likey,tag){
+	if (tf[tag]){
+		if (h[tag]>=minheight){
+			document.getElementById("main"+tag).style.height = h[tag] + "px";
+			setTimeout(function(){fn(likey,tag)},1);
+			h[tag] -= 10;
+		} else {
+			likey.innerHTML = "Unfold";
+			tf[tag] = !tf[tag];
+			h[tag] += 10;
+		}
+	} else {
+		if (h[tag]<=maxheight){
+			document.getElementById("main"+tag).style.height = h[tag] + "px";
+			setTimeout(function(){fn(likey,tag)},1);
+			h[tag] += 10;
+		} else {
+			likey.innerHTML = "FOLD";
+			tf[tag] = !tf[tag];
+			h[tag] -= 10;
+		}
+	}
+}
+</script>
+</body>
+</html>

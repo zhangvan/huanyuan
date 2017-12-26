@@ -14,7 +14,7 @@ ul {
 }
 li {
 	margin:10px;
-	width:800px;
+	width:1000px;
 	border:4px double #ccc;
 	background:#eee;
 }
@@ -75,15 +75,16 @@ li .key {
     <br />-	Separate dataset by stations (Not applied here as we got only 1 station)
     <br />-	Listed out which stations are working on which days? (Not applied here as we got only 1 station)</p>
     <p><strong>Explanation</strong>
-	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations">Shawbury</a>, from 2001 to 2017
-	<br />- CSV and Mat file contain the same dataset.
-    <br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date, 366 days in total
-    <br />-	<span style="color:MediumSeaGreen;">Radiation_Kj_m2</span> is the daily gross glbl_irad_amt, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/RO_Table.html">here</a>
+	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations" target="_blank">Shawbury</a>, from 2001 to 2017
+	
+    <br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date, Data before 2001 is filled by climatology based on 643
+    <br />-	<span style="color:MediumSeaGreen;">Radiation_Kj_m2</span> is the daily gross glbl_irad_amt, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/RO_Table.html" target="_blank">here</a>
     <br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, only 1 station
     <br />-	<span style="color:MediumSeaGreen;">Number_of_records</span> is the number of records which are used to calculate the mean value</p>
 	<p><strong>Data</strong>
-	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EWlEot8qQlJNuBVNGp1YxtkBalOq9SBwBOBooXpfUcY2Qg">
-	Radiation.zip </a>, 
+	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EWlEot8qQlJNuBVNGp1YxtkBalOq9SBwBOBooXpfUcY2Qg" target="_blank">
+	Radiation_file_pack</a>; <a href="https://bham-my.sharepoint.com/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EVuWDbggf_RJjkmoSBttiO8BL9wIXXnUwMyb7oSj3QiDyQ" target="_blank">
+	Bifor_Radiation.csv</a>
     </p>
 </div>
 <div class="intro">
@@ -95,9 +96,21 @@ li .key {
 <div class="main" id="main2">
 	<h2>Temperature_Mean</h2>
 	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
-	<p> In process
-	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com:443/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EcBijNQKkfZJgf9JLz_lhBoByD9dUocTxt5XSnlmLP5fiQ&email=T.A.M.Pugh%40bham.ac.uk&e=df108b6863554c1694767cb983f387f1">
-	CSV_file_pack </a>,</p>
+	<p> <strong>Manipulation</strong>
+	<br />- Calculate mean temperature from hourly record.
+	<br />- Delete original record (marked as 0 by Met Office) if the modified record (Marked as 1) is available 
+	<br />- use station 643 records primarily, then fill NaN
+	<br />- set any day with records less than 5 as NaN, grab the data from 622 (only 10 days, do that manually)
+	<p><strong>Explanation</strong>
+	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations" target="_blank">Shawbury</a>
+	
+    <br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date. series from 1957 to 2017. missing data were filled by stations <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=622&db=midas_stations" target="_blank">622</a>
+    <br />-	<span style="color:MediumSeaGreen;">Mean_daily_tempe</span> is the daily temperature with unit oC, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/WH_Table.html" target="_blank">here</a>
+    <br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, only 643 and 622
+    <br />-	<span style="color:MediumSeaGreen;">Number_of_records</span> is the number of records which are used to calculate the mean value</p>
+	<p><strong>Data</strong>
+	 	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com:443/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EWUsV_Gx_MFLg0wSAU58b7MBINnEJLizGrLtwZ97uzVf3g&email=T.A.M.Pugh%40bham.ac.uk&e=2a3e64bf3d744cc68974a663ff0d3fd3" target="_blank">
+	Bifor_Mean_temperature.csv</a>,</p>
 	
 </div>
 <div class="intro">
@@ -107,9 +120,30 @@ li .key {
 </li>
 <li>
 <div class="main" id="main3">
-	<h2>Temperature_MinMax</h2>
+	<h2>Rainfall</h2>
 	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
-	<p> In process</p>
+	<p> In process
+	<br />- Again, retrieve data from 643 622 681 651, delete redundant data, insert lacking date
+	<br />- use station 643 records primarily, then fill NaN from 628, 622, 651 successively
+	<br />- Some of the 2017 data is still unavailable, marked as NaN.
+	<br />- except 2017, there are no missing data!
+	<br />- I found that it might not be a good idea to get data from last week or next year. 
+	as rainfall is significantly changed by occasional event. You said use climatology if no data in either 
+	643 622 681. But I take the liberty of using 651 instead of climatology. Because data are missing in the whole period
+	from 1957-1960. Climatology will uniform those 3 years and miss any information of occasional event. 
+    But dont hesitate to tell me if you want me to use climatology,	I have climatology code ready,
+	<p><strong>Explanation</strong>
+	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations" target="_blank">Shawbury</a>
+	<br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date. series from 1946 to 2017. missing data were filled by stations <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=622&db=midas_stations" target="_blank">622</a>
+	<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=628&db=midas_stations" target="_blank">628</a>
+	<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=651&db=midas_stations" target="_blank">651</a>
+    <br />-	<span style="color:MediumSeaGreen;">Daily_precipitation</span> is with unit mm, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/RD_Table.html" target="_blank">here</a>
+    <br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, 643,622,628,651
+    <br />-	<span style="color:MediumSeaGreen;">Number_of_records</span> again, is the number of record which is used (unlike the former 2, not calculated from hourly data), it must be either 0(nodata) or 1(one daily record)</p>
+	<p><strong>Data</strong>
+	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com:443/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=ETtt21gIBfRMtFn45PLYBygBsBCK6Xk8lozyWAYY0nY9yA&email=T.A.M.Pugh%40bham.ac.uk&e=f583e131a14e40dd8ee3244847682484" target="_blank">
+	Bifor_precipitation.csv </a>,</p>
+	</p>
 	
 </div>
 <div class="intro">
@@ -119,7 +153,7 @@ li .key {
 </li>
 <li>
 <div class="main" id="main4">
-	<h2>Rainfall</h2>
+	<h2>Temp_MinMax</h2>
 	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
 	<p> In process</p>
 	
