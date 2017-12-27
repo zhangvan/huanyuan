@@ -122,7 +122,7 @@ li .key {
 <div class="main" id="main3">
 	<h2>Rainfall</h2>
 	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
-	<p> In process
+	<p> 
 	<br />- Again, retrieve data from 643 622 681 651, delete redundant data, insert lacking date
 	<br />- use station 643 records primarily, then fill NaN from 628, 622, 651 successively
 	<br />- Some of the 2017 data is still unavailable, marked as NaN.
@@ -155,8 +155,24 @@ li .key {
 <div class="main" id="main4">
 	<h2>Temp_MinMax</h2>
 	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
-	<p> In process</p>
-	
+	<p> <strong>Manipulation</strong>
+	<br />- Calculate daily Min and Max from 12 hour Min and Max
+	<br />- Delete original record (marked as 0 by Met Office) if the modified record (Marked as 1) is available 
+	<br />- use station 643 records primarily, then fill NaN 
+	<br />- Any day with missing records was set as NaN, filled by records from 628, 622. Do year 2011 manually as 2011 can't be read by matlab
+	<br />   &emsp; I have no idea what's wrong with that dataset....  
+	<p><strong>Explanation</strong>
+	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations" target="_blank">Shawbury</a>
+	<br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date. series from 1957 to 2017. missing data were filled by stations <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=622&db=midas_stations" target="_blank">622</a>
+	<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=628&db=midas_stations" target="_blank">628</a>
+    <br />-	<span style="color:MediumSeaGreen;">Min_air_temp</span> is the minimum temperature with unit oC, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/TD_Table.html" target="_blank">here</a>
+    <br />-	<span style="color:MediumSeaGreen;">Max_air_temp</span> is the maximum temperature with unit oC, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/TD_Table.html" target="_blank">here</a>
+	<br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, only 643 and 622
+    <br />-	<span style="color:MediumSeaGreen;">Number_of_records</span> is the number of records which are used to calculate the mean value</p>
+	<p><strong>Data</strong>
+	 	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com:443/personal/hxz605_student_bham_ac_uk/_layouts/15/guestaccess.aspx?share=EZXO8hp9EMtHq_30yVFkG6IBi3v2tJ2RDPXaZ9CPo4Cy0A&email=T.A.M.Pugh%40bham.ac.uk&e=3b2da5d37a21480f830d20ed6ae60141
+" target="_blank">
+	Bifor_MinMax_temperature.csv</a>,</p>	
 </div>
 <div class="intro">
 	Contact me: Van Zhang &rarr; hxz605@student.bham.ac.uk
