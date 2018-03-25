@@ -130,22 +130,18 @@ li .key {
 	<h2>Rainfall</h2>
 	<p class="mainf">The data is prepared for Dr Tom Pugh. </p>
 	<p> 
-	<br />- Again, retrieve data from 643 622 681 651, delete redundant data, insert lacking date
-	<br />- use station 643 records primarily, then fill NaN from 628, 622, 651 successively
+	<br />- retrieve data from 643 651, 9868, 638, delete redundant data, insert lacking date
+	<br />- use station 643 records primarily, then fill NaN from 651, 9868, 638 successively
 	<br />- Some of the 2017 data is still unavailable, marked as NaN.
 	<br />- except 2017, there are no missing data!
-	<br />- I found that it might not be a good idea to get data from last week or next year. 
-	as rainfall is significantly changed by occasional event. You said use climatology if no data in either 
-	643 622 681. But I take the liberty of using 651 instead of climatology. Because data are missing in the whole period
-	from 1957-1960. Climatology will uniform those 3 years and miss any information of occasional event. 
-    But dont hesitate to tell me if you want me to use climatology,	I have climatology code ready,
+	
 	<p><strong>Explanation</strong>
 	<br />- The dataset is based on station <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=643&db=midas_stations" target="_blank">Shawbury</a>
-	<br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date. series from 1946 to 2017. missing data were filled by stations <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=622&db=midas_stations" target="_blank">622</a>
-	<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=628&db=midas_stations" target="_blank">628</a>
+	<br />-	<span style="color:MediumSeaGreen;">ob_end_time</span> is date. series from 1946 to 2017. missing data were filled by stations <a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=638&db=midas_stations" target="_blank">638</a>
+	<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=9868&db=midas_stations" target="_blank">9868</a>
 	<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?id=651&db=midas_stations" target="_blank">651</a>
     <br />-	<span style="color:MediumSeaGreen;">Daily_precipitation</span> is with unit mm, further info available <a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/RD_Table.html" target="_blank">here</a>
-    <br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, 643,622,628,651
+    <br />-	<span style="color:MediumSeaGreen;">src_id</span> is station number, 643 651, 9868, 638
     <br />-	<span style="color:MediumSeaGreen;">Number_of_records</span> again, is the number of record which is used (unlike the former 2, not calculated from hourly data), it must be either 0(nodata) or 1(one daily record)</p>
 	<p><strong>Data</strong>
 	<br />- Link (need to login uni account): <a href="https://bham-my.sharepoint.com:443/:x:/g/personal/hxz605_student_bham_ac_uk/EbeOl0VN5D1JnNrVyAfaC40BKpMcio-qExSocvxlPrv0ew?email=T.A.M.Pugh%40bham.ac.uk&e=ErjYyD" target="_blank">
